@@ -1,0 +1,14 @@
+extend components/template.pug
+block contents
+    +head("Add Product")
+    body
+        +header("Menú administrador") 
+        main.addProduct
+            h1.addProduct__title Add new product 
+            form(action="submit").addProduct__form
+                input(type="url")
+                input(type="text")
+                input(type="text")
+                input(type="number")
+                textarea(name="", cols="30", rows="10") 
+                button(type="submit") Add product

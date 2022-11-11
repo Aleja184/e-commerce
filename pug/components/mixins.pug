@@ -1,0 +1,50 @@
+mixin head(title) 
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title=title
+        link(rel="stylesheet", href="")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap") 
+
+mixin products
+    h2.title
+    a.seeAll See all 
+    ul
+        li
+            img(src="", alt="")
+            h3 
+            strong $60,00 
+            a(href="") Ver producto
+        li
+            img(src="", alt="")
+            h3 
+            strong $60,00 
+            a(href="") Ver producto
+        li
+            img(src="", alt="")
+            h3 
+            strong $60,00 
+            a(href="") Ver producto
+        li
+            img(src="", alt="")
+            h3 
+            strong $60,00 
+            a(href="") Ver producto
+        li
+            img(src="", alt="")
+            h3 
+            strong $60,00 
+            a(href="") Ver producto
+        li
+            img(src="", alt="")
+            h3 
+            strong $60,00 
+            a(href="") Ver producto
+mixin header(textButton)
+    header
+        img(src="../../assets/icons/AluraGeek-logo.png", alt="AluraGeek logo")
+        .search 
+            input(type="text", name="")
+            img(src="../../assets/icons/search.png", alt="Search icon")
+            a(href="").btn textButton 

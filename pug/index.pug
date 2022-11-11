@@ -1,0 +1,15 @@
+extend components/template.pug
+block contents
+    +head("Index")
+    body 
+        +header("Login")
+        main 
+            section.banner
+        section.products 
+            .products__starWars 
+                +products
+            .products__consoles
+                +products
+            .products__moreProducts 
+                +products
+                

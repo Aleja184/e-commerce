@@ -1,0 +1,11 @@
+extend components/template.pug
+block contents
+    +head("Login")
+    body
+        +header("Login")    
+        main.login 
+            h2.login__title Iniciar Sesión
+            form(action="submit").login__form
+                input(type="text" placeholder="Email")
+                input(type="password" placeholder="Password")
+                button(type="submit") Login 
