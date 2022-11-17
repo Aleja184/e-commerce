@@ -3,6 +3,9 @@ header{
     align-items: center;
     justify-content: space-between;
     margin: 0 5%;
+    a > img{
+        cursor: pointer;
+    }
     .search{
         order: 3;
         input{

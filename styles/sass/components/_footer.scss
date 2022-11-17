@@ -1,0 +1,39 @@
+footer {
+    background: $background-second;
+    text-align: center;
+    .footer__information{
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        li{
+            margin-bottom: 0.5rem;
+            a{
+                color: $color-font;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+        }
+        textarea{
+            height: 100px;
+        }
+        button{
+            background: $background-buttons;
+            margin: 1rem;
+            border: none;
+            color: $color-second-font;
+            height: 3rem;
+            border-radius: 5px;
+            transition: 1s;
+        }
+        button:hover{
+            transform: scale(110%);
+        }
+    }
+    .footer__developed{
+        padding: 20px;
+        background: $background-header
+    }
+
+}
