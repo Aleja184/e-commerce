@@ -1,12 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
 /* Media Queries Mixin
 **********************/
 @media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
   .carousel-inner img {
-    height: 40vh;
+    height: 30vh;
   }
   #carousel .overlay .container {
     margin: 0;
     left: -20%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .carousel-inner img {
+    height: 50vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .offset-md-6 {
+    width: 100%;
+    margin: 0;
+  }
+  #carousel .overlay .container {
+    top: 0;
+  }
+  #carousel .overlay .container h1 {
+    font-size: 4rem;
+  }
+  #carousel .overlay .container h2 {
+    font-size: 2rem;
+  }
+  #carousel .overlay .container .btn-primary {
+    font-size: 1.4rem;
   }
 }
 header {
@@ -45,6 +79,7 @@ header .search img {
     display: flex;
     border: 1px solid black;
     border-radius: 20px;
+    width: 20%;
   }
   header .search input {
     display: block;
@@ -54,6 +89,8 @@ header .search img {
     border: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    width: 92%;
+    padding-left: 5px;
   }
   header .search img {
     -o-object-fit: contain;
@@ -120,14 +157,14 @@ header .search img {
 .products__starWars ul li a {
   font-weight: bold;
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+@media only screen and (min-width: 768px) {
   .products__starWars ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   .products__starWars ul li {
-    width: 30%;
+    width: 15%;
   }
 }
 
@@ -189,14 +226,14 @@ header .search img {
 .products__consoles ul li a {
   font-weight: bold;
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+@media only screen and (min-width: 768px) {
   .products__consoles ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   .products__consoles ul li {
-    width: 30%;
+    width: 15%;
   }
 }
 
@@ -258,14 +295,14 @@ header .search img {
 .products__moreProducts ul li a {
   font-weight: bold;
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+@media only screen and (min-width: 768px) {
   .products__moreProducts ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   .products__moreProducts ul li {
-    width: 30%;
+    width: 15%;
   }
 }
 
@@ -307,12 +344,13 @@ footer .footer__information button {
   border-radius: 5px;
   -webkit-transition: 1s;
   transition: 1s;
+  padding: 0 5px 0 5px;
 }
 footer .footer__information button:hover {
   -webkit-transform: scale(110%);
           transform: scale(110%);
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+@media only screen and (min-width: 768px) {
   footer .footer__information {
     display: -ms-grid;
     display: grid;
@@ -337,7 +375,7 @@ footer .footer__information button:hover {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
-  footer .footer__information .footer__information--img {
+  footer .footer__information .footer__information--logo {
     -ms-flex-item-align: baseline;
         align-self: baseline;
     -ms-grid-column-align: center;

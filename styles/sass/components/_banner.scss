@@ -1,9 +1,31 @@
 @include media(tablet-p-only){
     .carousel-inner img{
-        height: 40vh;
+        height: 30vh;
     }
     #carousel .overlay .container{
         margin: 0;
         left: -20%;
+    }
+}
+@include media(desktop-s){
+    .carousel-inner img{
+        height: 50vh;
+        object-fit: cover;
+    }
+    .offset-md-6{
+        width: 100%;
+        margin: 0;
+    }
+    #carousel .overlay .container{
+        top: 0;
+        h1{
+            font-size: 4rem;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        .btn-primary{
+            font-size: 1.4rem;
+        }
     }
 }

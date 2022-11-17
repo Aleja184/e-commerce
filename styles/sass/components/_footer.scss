@@ -26,15 +26,16 @@ footer {
             height: 3rem;
             border-radius: 5px;
             transition: 1s;
+            padding: 0 5px 0 5px;
         }
         button:hover{
             transform: scale(110%);
         }
-        @include media(tablet-p-only){
+        @include media(tablet){
             display: grid;
             grid-template-columns: repeat(2,50%);
             grid-template-rows: repeat(2,50%);
-            .footer__information--img{
+            .footer__information--logo{
                 align-self: baseline;
                 justify-self: center;
             }
