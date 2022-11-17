@@ -1,0 +1,9 @@
+@include media(tablet-p-only){
+    .carousel-inner img{
+        height: 40vh;
+    }
+    #carousel .overlay .container{
+        margin: 0;
+        left: -20%;
+    }
+}

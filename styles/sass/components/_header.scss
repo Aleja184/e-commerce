@@ -10,10 +10,28 @@ header{
         order: 3;
         input{
             display: none;
-            transition: 1s;
         }
         img{
             cursor: pointer;
+        }
+    }
+    @include media(tablet){
+        .search{
+            order: 0;
+            display: flex;
+            border: 1px solid black;
+            border-radius: 20px;
+            input{
+                display: block;
+                order: -1;
+                border: none;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+            }
+            img{
+                object-fit: contain;
+                border-bottom-right-radius: 10px;
+            }
         }
     }
 

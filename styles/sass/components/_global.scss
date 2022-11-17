@@ -44,4 +44,12 @@ $color-second-font:#FFFFFF;
             }
         }
     }
+    @include media(tablet-p-only){
+        ul{
+            justify-content: center;
+            li{
+                width: 30%;
+            }
+        }
+    }
 }
