@@ -10,6 +10,7 @@ footer {
             margin-bottom: 0.5rem;
             a{
                 color: $color-font;
+                text-decoration: none;
             }
             a:hover{
                 text-decoration: underline;
@@ -18,19 +19,7 @@ footer {
         textarea{
             height: 100px;
         }
-        button{
-            background: $background-buttons;
-            margin: 1rem;
-            border: none;
-            color: $color-second-font;
-            height: 3rem;
-            border-radius: 5px;
-            transition: 1s;
-            padding: 0 5px 0 5px;
-        }
-        button:hover{
-            transform: scale(110%);
-        }
+        @include buttons;
         @include media(tablet){
             display: grid;
             grid-template-columns: repeat(2,50%);

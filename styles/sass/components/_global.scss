@@ -54,3 +54,19 @@ $color-second-font:#FFFFFF;
     }
 }
 
+@mixin buttons{
+    button{
+        background: $background-buttons;
+        margin: 1rem;
+        border: none;
+        color: $color-second-font;
+        height: 3rem;
+        border-radius: 5px;
+        transition: 1s;
+        padding: 0 5px 0 5px;
+    }
+    button:hover{
+        transform: scale(110%);
+    }
+}
+

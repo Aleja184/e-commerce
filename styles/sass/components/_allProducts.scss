@@ -1,0 +1,10 @@
+.allProducts{
+    @include products;
+    &__button{
+        width: auto;
+        height: auto;
+        align-self: center;
+        justify-self: flex-end;
+        margin-right: 5%;
+    }
+}
