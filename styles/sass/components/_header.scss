@@ -2,9 +2,12 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 5%;
+    margin: 10px 5%;
     a > img{
         cursor: pointer;
+        @include media(mobile-only){
+            width: 100px;
+        }
     }
     .search{
         order: 3;
