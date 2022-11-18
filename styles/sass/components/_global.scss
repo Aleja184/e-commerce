@@ -94,3 +94,13 @@ $color-second-font:#FFFFFF;
         }
     }
 }
+
+@mixin seeProduct{
+    .seeProduct{
+        background: none;
+        border: none;
+        font-weight: bold;
+        color: var(--bs-link-color);
+        align-self: flex-start;
+      }
+}

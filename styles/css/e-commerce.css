@@ -172,6 +172,14 @@ header .search img {
     width: 15%;
   }
 }
+.products__starWars .seeProduct {
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: var(--bs-link-color);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
 
 .products__consoles {
   display: -ms-grid;
@@ -241,6 +249,14 @@ header .search img {
     width: 15%;
   }
 }
+.products__consoles .seeProduct {
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: var(--bs-link-color);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
 
 .products__moreProducts {
   display: -ms-grid;
@@ -309,6 +325,34 @@ header .search img {
   .products__moreProducts ul li {
     width: 15%;
   }
+}
+.products__moreProducts .seeProduct {
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: var(--bs-link-color);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal-body img {
+  width: 60%;
+}
+.modal-body strong {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .login {
