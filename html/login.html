@@ -25,12 +25,18 @@
       <h2 class="login__title">Login</h2>
       <form class="login__form" action="submit">
         <div class="form-floating mb-3 mt-4">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-          <label for="floatingInput">Email address</label>
+          <input type="email" class="form-control" id="floatingName" placeholder="name@example.com" data-type="email" required>
+          <label for="floatingName">Email address</label>
+          <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
+            Please enter your email
+          </div>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" data-type="password">
           <label for="floatingPassword">Password</label>
+          <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
+            Please enter your password
+          </div>
         </div>
         <button type="submit">Login </button>
       </form>
@@ -49,14 +55,24 @@
         </nav>
         <form class="footer__form" action="submit">
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Full name">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Full name" maxlength="40" data-type="fullname" required>
             <label for="floatingInput">Full name</label>
+            <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
+              Please enter your full name
+            </div>
           </div>
-          <textarea class="form-control" name="footer" cols="30" rows="10" placeholder="Write your message here"></textarea>
-          <button type="submit">Send message </button>
+          <textarea class="form-control" name="footer" cols="30" rows="10" placeholder="Write your message here" maxlength="120" required data-type="text"></textarea>
+          <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
+            Please enter a message
+          </div>
+          <button type="submit" id="sendMessage">Send message </button>
         </form>
       </section>
       <section class="footer__developed"><span class="footer__developed--name">Developed by Alejandra Toro Grisales </span><span class="footer__developed--year">2022 </span></section>
     </footer>
+    <!--Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="../js/script.js" type="module"></script>
+    <!--/Scripts-->
   </body>
 </html>

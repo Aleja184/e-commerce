@@ -7,4 +7,14 @@
         justify-self: flex-end;
         margin-right: 5%;
     }
+    &__icons{
+        display: flex;
+        position: absolute;
+        width: 100%;
+        .trashIcon, .editIcon{
+            width: 1.2rem;
+            margin: 0 2px;
+            cursor: pointer;
+        }
+    }
 }

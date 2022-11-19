@@ -1,13 +1,13 @@
 .addProduct{
     @include forms;
     @include media(tablet-p-only){
-        textarea{
+        textarea, .file{
             width: 50%;
             margin: 1.5rem auto;
         }
     }
     @include media(desktop-s){
-        textarea{
+        textarea, .file{
             width: 30%;
             margin: 1.5rem auto;
         }

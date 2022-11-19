@@ -25,27 +25,25 @@
     <main class="addProduct">
       <h1 class="addProduct__title">Add new product </h1>
       <form class="addProduct__form" action="submit">
-        <div class="form-floating mb-3 mt-4">
-          <input type="url" class="form-control" id="floatingInput" placeholder="URL image">
-          <label for="floatingInput">URL image</label>
+        <div class="mb-3 mt-4">
+          <input type="file" accept=".jpg,.gif,.png"  class="form-control file" id="floatingInput" data-type="fileImage" required>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Categoría">
-          <label for="floatingInput">Categoría</label>
+          <input type="text" class="form-control" id="floatingInput" placeholder="Categoría" maxlength="20" data-type="category" required>
+          <label for="floatingInput">Category</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Product name">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Product name" maxlength="20" data-type="productName" required>
           <label for="floatingInput">Product name</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="number" class="form-control" id="floatingInput" placeholder="Price">
+          <input type="number" class="form-control" id="floatingInput" placeholder="Price" data-type="price" required>
           <label for="floatingInput">Price</label>
         </div>
-        <textarea name="" id="" class="form-control" placeholder="Description"></textarea>
-        <button type="submit" class="btn btn-primary">Add product</button>
+        <textarea name="" id="" class="form-control" placeholder="Description" maxlength="150" data-type="textAddProduct"></textarea>
+        <button type="submit" class="btn btn-primary" id="addProduct">Add product</button>
       </form>
     </main>
-  </body>
   <footer class="footer">
     <section class="footer__information"><img class="footer__information--logo" src="../../assets/icons/AluraGeek-logo.png" alt="Logo Alura Greek">
       <nav class="footer__nav">
@@ -60,13 +58,24 @@
       </nav>
       <form class="footer__form" action="submit">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Full name">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Full name" maxlength="40" data-type="fullname" required>
           <label for="floatingInput">Full name</label>
+          <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
+            Please enter your full name
+          </div>
         </div>
-        <textarea class="form-control" name="footer" cols="30" rows="10" placeholder="Write your message here"></textarea>
-        <button type="submit">Send message </button>
+        <textarea class="form-control" name="footer" cols="30" rows="10" placeholder="Write your message here" maxlength="120" required data-type="text"></textarea>
+        <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
+          Please enter a message
+        </div>
+        <button type="submit" id="sendMessage">Send message </button>
       </form>
     </section>
     <section class="footer__developed"><span class="footer__developed--name">Developed by Alejandra Toro Grisales </span><span class="footer__developed--year">2022 </span></section>
   </footer>
+  <!--Scripts-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+  <script src="../js/script.js" type="module"></script>
+  <!--/Scripts-->
+</body>
 </html>

@@ -471,6 +471,18 @@ header .search img {
   justify-self: flex-end;
   margin-right: 5%;
 }
+.allProducts__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100%;
+}
+.allProducts__icons .trashIcon, .allProducts__icons .editIcon {
+  width: 1.2rem;
+  margin: 0 2px;
+  cursor: pointer;
+}
 
 .addProduct {
   text-align: center;
@@ -511,13 +523,13 @@ header .search img {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
-  .addProduct textarea {
+  .addProduct textarea, .addProduct .file {
     width: 50%;
     margin: 1.5rem auto;
   }
 }
 @media only screen and (min-width: 992px) {
-  .addProduct textarea {
+  .addProduct textarea, .addProduct .file {
     width: 30%;
     margin: 1.5rem auto;
   }

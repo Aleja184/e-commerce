@@ -15,6 +15,7 @@
       <link rel="icon" href="../assets/icons/icon.ico" type="ico" sizes="48">
     </head>
   <body> 
+    <!--Header-->
       <header><a href="index.html"><img src="../../assets/icons/AluraGeek-logo.png" alt="AluraGeek logo"></a>
         <div class="search"> 
           <label for="search"><img src="../../assets/icons/search.png" alt="Search icon"></label>
@@ -22,7 +23,9 @@
         </div>
         <a class="btn btn-light" href="./login.html">Login</a>
       </header>
+    <!--/Header-->
     <main> 
+      <!--Banner-->
       <section class="banner">
         <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-pause="false">
           <div class="carousel-inner">
@@ -41,7 +44,7 @@
                   <div class="col-md-6 offset-md-6 text-md-right">
                     <h1>Febrero promocional</h1>
                     <h2>Productos selecionados con 33% de descuento</h2>
-                    <a href="" class="btn btn-primary">Ver consolas</a>
+                    <a href="#consoles" class="btn btn-primary">Ver consolas</a>
                   </div>
                 </div>
               </div>
@@ -49,8 +52,10 @@
           </div>
         </div>
       </section>
+      <!--/Banner-->
     </main>
     <section class="products"> 
+      <!--Star Wars-->
       <div class="products__starWars"> 
           <h2 class="title">Star Wars</h2><a class="seeAll">See all <img src="../assets/icons/arrow.png" alt="Arrow"> </a>
           <ul>
@@ -92,7 +97,9 @@
             </li>
           </ul>
       </div>
-      <div class="products__consoles">
+      <!--/Star Wars-->
+      <!--Consoles-->
+      <div class="products__consoles" id="consoles">
           <h2 class="title">Consoles</h2><a class="seeAll">See all <img src="../assets/icons/arrow.png" alt="Arrow"> </a>
           <ul>
             <li><img src="../assets/img/xbox_controller.png" alt="Xbox controller">
@@ -133,6 +140,8 @@
             </li>
           </ul>
       </div>
+      <!--/Consoles-->
+      <!--More-->
       <div class="products__moreProducts"> 
           <h2 class="title">More products</h2><a class="seeAll">See all <img src="../assets/icons/arrow.png" alt="Arrow"> </a>
           <ul>
@@ -174,7 +183,9 @@
             </li>
           </ul>
       </div>
+      <!--More-->
     </section>
+    <!--Footer-->
     <footer class="footer">
       <section class="footer__information"><img class="footer__information--logo" src="../../assets/icons/AluraGeek-logo.png" alt="Logo Alura Greek">
         <nav class="footer__nav">
@@ -189,15 +200,22 @@
         </nav>
         <form class="footer__form" action="submit">
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Full name">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Full name" maxlength="40" data-type="fullname" required>
             <label for="floatingInput">Full name</label>
+            <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
+              Please enter your full name
+            </div>
           </div>
-          <textarea class="form-control" name="footer" cols="30" rows="10" placeholder="Write your message here"></textarea>
-          <button type="submit">Send message </button>
+          <textarea class="form-control" name="footer" cols="30" rows="10" placeholder="Write your message here" maxlength="120" required data-type="text"></textarea>
+          <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
+            Please enter a message
+          </div>
+          <button type="submit" id="sendMessage">Send message </button>
         </form>
       </section>
       <section class="footer__developed"><span class="footer__developed--name">Developed by Alejandra Toro Grisales </span><span class="footer__developed--year">2022 </span></section>
     </footer>
+    <!--/Footer-->
     <!--Modal-->
     <div class="modal fade" id="CupStormtrooper" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -219,5 +237,9 @@
       </div>
     </div>
     <!--/Modal-->
+    <!--Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="../js/script.js" type="module"></script>
+    <!--/Scripts-->
   </body>
 </html>
