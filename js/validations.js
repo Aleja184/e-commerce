@@ -1,3 +1,4 @@
+//Validations inputs
 export function validation(input){
     const inputType = input.dataset.type;
     let label = input.nextElementSibling;
@@ -10,6 +11,7 @@ export function validation(input){
     }
 }
 
+//Validations textarea
 export function validationText(textarea){
     if(textarea.validity.valid){
         textarea.nextElementSibling.classList.add("d-none");
@@ -17,6 +19,7 @@ export function validationText(textarea){
         textarea.nextElementSibling.classList.remove("d-none");
     }
 }
+
 
 const errorsType = [
     "valueMissing",
@@ -31,6 +34,13 @@ const errorsMessages = {
   },
   text:{
       valueMissing: "Please enter a message"
+  },
+  email: {
+    valueMissing: "Please enter your email",
+    typeMismatch: "Email invalid",
+  },
+  password:{
+    valueMissing: "Please enter your password"
   }
 }
 
