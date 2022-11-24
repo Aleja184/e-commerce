@@ -15,6 +15,7 @@
       <link rel="icon" href="../assets/icons/icon.ico" type="ico" sizes="48">
     </head>
   <body>
+    <!--Header-->
       <header><a href="index.html"><img src="../../assets/icons/AluraGeek-logo.png" alt="AluraGeek logo"></a>
         <div class="search"> 
           <label for="search"><img src="../../assets/icons/search.png" alt="Search icon"></label>
@@ -22,28 +23,48 @@
         </div>
         <a class="btn btn-light" href="./allProducts.html">Menú administrador</a>
       </header>
+    <!--/Header-->
     <main class="addProduct">
       <h1 class="addProduct__title">Add new product </h1>
-      <form class="addProduct__form" action="submit">
-        <div class="mb-3 mt-4">
-          <input type="file" accept=".jpg,.gif,.png"  class="form-control file" id="floatingInput" data-type="fileImage" required>
+      <!--Form add product-->
+      <form class="addProduct__form" id="add_form"  action="submit">
+        <div class="mb-3 mt-4 file">
+          <input type="file" accept=".jpg,.gif,.png"  class="form-control" id="floatingFile" data-type="fileImage" required>
+          <label for="" class="d-none"></label>
+          <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
+            Please enter a message
+          </div>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Categoría" maxlength="20" data-type="category" required>
+          <input type="text" class="form-control" id="floatingCategory" placeholder="Categoría" maxlength="20" data-type="category" required>
           <label for="floatingInput">Category</label>
+          <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
+            Please enter a message
+          </div>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Product name" maxlength="20" data-type="productName" required>
+          <input type="text" class="form-control" id="floatingProduct" placeholder="Product name" maxlength="20" data-type="productName" required>
           <label for="floatingInput">Product name</label>
+          <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
+            Please enter a message
+          </div>
         </div>
         <div class="form-floating mb-3">
-          <input type="number" class="form-control" id="floatingInput" placeholder="Price" data-type="price" required>
+          <input type="number" class="form-control" id="floatingPrice" placeholder="Price" data-type="price" required>
           <label for="floatingInput">Price</label>
+          <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
+            Please enter a message
+          </div>
         </div>
-        <textarea name="" id="" class="form-control" placeholder="Description" maxlength="150" data-type="textAddProduct"></textarea>
-        <button type="submit" class="btn btn-primary" id="addProduct">Add product</button>
+        <textarea name="" id="" class="form-control" placeholder="Description" maxlength="150" data-type="descriptionProduct" required></textarea>
+        <div class="alert alert-danger p-1 d-none" role="alert">
+          Please enter a message
+        </div>
+        <button class="btn btn-primary" type="submit">Add product</button>
       </form>
+    <!--/Form add proudct-->
     </main>
+    <!--Footer-->
   <footer class="footer">
     <section class="footer__information"><img class="footer__information--logo" src="../../assets/icons/AluraGeek-logo.png" alt="Logo Alura Greek">
       <nav class="footer__nav">
@@ -56,7 +77,7 @@
           <li><a class="footer__nav--item" href="#">Announce here </a></li>
         </ul>
       </nav>
-      <form class="footer__form" action="submit">
+      <form class="footer__form" id="footer_form" action="submit">
         <div class="form-floating mb-3">
           <input type="text" class="form-control" id="floatingInput" placeholder="Full name" maxlength="40" data-type="fullname" required>
           <label for="floatingInput">Full name</label>
@@ -68,14 +89,16 @@
         <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
           Please enter a message
         </div>
-        <button type="submit" id="sendMessage">Send message </button>
+        <button type="submit">Send message </button>
       </form>
     </section>
     <section class="footer__developed"><span class="footer__developed--name">Developed by Alejandra Toro Grisales </span><span class="footer__developed--year">2022 </span></section>
   </footer>
+  <!--/Footer-->
   <!--Scripts-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
   <script src="../js/script.js" type="module"></script>
+  <script src="../js/components/addProduct.js"></script>
   <!--/Scripts-->
 </body>
 </html>

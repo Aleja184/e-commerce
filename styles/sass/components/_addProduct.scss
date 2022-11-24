@@ -4,12 +4,24 @@
         textarea, .file{
             width: 50%;
             margin: 1.5rem auto;
+            margin-bottom: 0.5rem;
         }
-    }
+        textarea + div{
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+        }
+    }  
     @include media(desktop-s){
         textarea, .file{
             width: 30%;
             margin: 1.5rem auto;
+            margin-bottom: 0.5rem;
+        }
+        textarea + div{
+            width: 30%;
+            margin: 0 auto;
+            margin-bottom: 1rem;
         }
     }
 }

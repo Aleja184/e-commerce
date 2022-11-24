@@ -8,6 +8,7 @@ $background-buttons: #2A7AE4;
 $color-font: #464646;
 $color-second-font:#FFFFFF;
 
+
 @mixin products{
     display: grid;
     grid-template-columns: repeat(2,50%);
@@ -88,6 +89,7 @@ $color-second-font:#FFFFFF;
             width: 30%;
             margin: 1.5rem auto;
         }
+        
         button{
             width: 15%;
             margin-top:0 ;

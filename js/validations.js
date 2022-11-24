@@ -13,10 +13,12 @@ export function validation(input){
 
 //Validations textarea
 export function validationText(textarea){
+    const textareaType = textarea.dataset.type;
     if(textarea.validity.valid){
         textarea.nextElementSibling.classList.add("d-none");
     }else{
         textarea.nextElementSibling.classList.remove("d-none");
+        textarea.nextElementSibling.innerHTML = showErrorMessageTextarea(textareaType,textarea)
     }
 }
 
@@ -37,13 +39,32 @@ const errorsMessages = {
   },
   email: {
     valueMissing: "Please enter your email",
-    typeMismatch: "Email invalid",
+    typeMismatch: "Invalid email",
   },
   password:{
     valueMissing: "Please enter your password"
+  },
+  fileImage:{
+    valueMissing: "Please select a image"
+  },
+  category:{
+    valueMissing: "Please enter a category"
+  },
+  productName:{
+    valueMissing: "Please enter the product name"
+  },
+  price: {
+    valueMissing: "Please enter a price"
+  },
+  descriptionProduct:{
+    valueMissing: "Please enter a product description"
+  },
+  text:{
+    valueMissing: "Please enter a message"
   }
 }
 
+//Error message for inputs
 const showErrorMessage = (inputType,input) => {
     let message = "";
     errorsType.forEach((error)=>{
@@ -51,5 +72,16 @@ const showErrorMessage = (inputType,input) => {
             message = errorsMessages[inputType][error];
         }
     });
+    return message;
+}
+
+//Error message for textareas
+const showErrorMessageTextarea = (textareaType,textarea) =>{
+    let message = "";
+    errorsType.forEach((error)=>{
+        if(textarea.validity[error]){
+            message = errorsMessages[textareaType][error];
+        }
+    })
     return message;
 }
