@@ -1,0 +1,130 @@
+{
+  "Store":[
+    {
+        "id":"1",
+        "img": "../assets/img/stormtrooper-cup.png",
+        "category": "Star Wars",
+        "productName" : "Cup with shape of Stormtrooper",
+        "price": "60.00"
+    },
+    {
+        "id":"2",
+        "img": "../assets/img/darth_vader.png",
+        "category": "Star Wars",
+        "productName" : "Darth Vader",
+       "price":"60.00"
+    },
+    {
+        "id":"3",
+        "img": "../assets/img/yoda.png",
+        "category": "Star Wars",
+        "productName": "Figure of Yoda",
+        "price": "60.00"
+    },
+    {
+        "id":"4",
+        "img": "../assets/img/stormtrooper.png",
+        "category": "Star Wars",
+        "productName": "Stormtrooper",
+       "price":"60.00"
+    },
+    {
+        "id":"5",
+        "img": "../assets/img/grogu.png",
+        "category": "Star Wars",
+        "productName": "Figure of Grogu",
+        "price": "60.00"
+    },
+    {
+        "id":"6",
+        "img": "../assets/img/kylo_ren.png",
+        "category": "Star Wars",
+        "productName": "Kylo Ren",
+        "price": "60.00"
+    },
+    {
+        "id":"7",
+        "img": "../assets/img/xbox_controller.png",
+        "category": "Consoles",
+        "productName": "Xbox controller",
+        "price": "60.00"
+    },
+    {
+      "id":"8",
+        "img": "../assets/img/controller_console.png",
+      "category": "Consoles",
+      "productName": "Console with controller",
+      "price": "60.00"
+    },
+    {
+      "id":"9",
+        "img": "../assets/img/nintendo_controller.png",
+      "category": "Consoles",
+      "productName": "Nintendo controller",
+      "price": "60.00"
+    },
+    {
+      "id":"10",
+        "img": "../assets/img/controller_joy-pad.png",
+      "category": "Consoles",
+      "productName": "Joy pad controller",
+      "price": "60.00"
+    },
+    {
+      "id":"11",
+        "img": "../assets/img/game_boy.png",
+      "category": "Consoles",
+      "productName":"Game boy",
+      "price": "60.00"
+    },
+    {
+      "id":"12",
+        "img": "../assets/img/xbox_console.png",
+      "category": "Consoles",
+      "productName": "Xbox console",
+      "price": "60.00"
+    },
+    {
+      "id":"13",
+        "img": "../assets/img/Atari_t-shirt.png",
+      "category": "Others",
+      "productName": "Atari T-shirt",
+      "price": "60.00"
+    },
+    {
+      "id":"14",
+        "img": "../assets/img/SNESS_t-shirt.png",
+      "category": "Others",
+      "productName": "SNESS T-shirt",
+      "price": "60.00"
+    },
+    {
+      "id":"15",
+        "img": "../assets/img/sonic.png",
+      "category": "Others",
+      "productName": "Sonic figure",
+      "price": "60.00"
+    },
+    {
+      "id":"16",
+        "img": "data:image/png;base64,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",
+      "category": "Others",
+      "productName": "Alarm clock",
+      "price": "60.00"
+    },
+    {
+      "id":"17",
+        "img": "../assets/img/vr_headset.png",
+      "category": "Others",
+      "productName": "VR headset",
+      "price": "60.00"
+    },
+    {
+      "id":"18",
+        "img": "../assets/img/pikachu.png",
+      "category": "Others",
+      "productName": "Pikachu",
+      "price": "60.00"
+    }
+]
+}
