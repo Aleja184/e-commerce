@@ -27,36 +27,36 @@
     <main class="addProduct">
       <h1 class="addProduct__title">Add new product </h1>
       <!--Form add product-->
-      <form class="addProduct__form" id="add_form"  action="submit">
+      <form class="addProduct__form" id="add_form"  action="submit" data-form>
         <div class="mb-3 mt-4 file">
-          <input type="file" accept=".jpg,.gif,.png"  class="form-control" id="floatingFile" data-type="fileImage" required>
+          <input type="file" accept=".jpg,.gif,.png"  class="form-control" id="floatingFile" data-type="fileImage" required data-img>
           <label for="" class="d-none"></label>
           <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
             Please enter a message
           </div>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingCategory" placeholder="Categoría" maxlength="20" data-type="category" required>
+          <input type="text" class="form-control" id="floatingCategory" placeholder="Categoría" maxlength="20" data-type="category" required data-category>
           <label for="floatingInput">Category</label>
           <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
             Please enter a message
           </div>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingProduct" placeholder="Product name" maxlength="20" data-type="productName" required>
+          <input type="text" class="form-control" id="floatingProduct" placeholder="Product name" maxlength="20" data-type="productName" required data-product>
           <label for="floatingInput">Product name</label>
           <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
             Please enter a message
           </div>
         </div>
         <div class="form-floating mb-3">
-          <input type="number" class="form-control" id="floatingPrice" placeholder="Price" data-type="price" required>
+          <input type="number" class="form-control" id="floatingPrice" placeholder="Price" data-type="price" required data-price>
           <label for="floatingInput">Price</label>
           <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
             Please enter a message
           </div>
         </div>
-        <textarea name="" id="" class="form-control" placeholder="Description" maxlength="150" data-type="descriptionProduct" required></textarea>
+        <textarea name="" id="" class="form-control" placeholder="Description" maxlength="150" data-type="descriptionProduct" required data-description></textarea>
         <div class="alert alert-danger p-1 d-none" role="alert">
           Please enter a message
         </div>
@@ -96,6 +96,8 @@
   </footer>
   <!--/Footer-->
   <!--Scripts-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../js/controllers/addProduct.controller.js" type="module"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
   <script src="../js/script.js" type="module"></script>
   <script src="../js/components/addProduct.js"></script>
