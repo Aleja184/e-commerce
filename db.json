@@ -1,13 +1,6 @@
 {
   "Store": [
     {
-      "id": "1",
-      "img": "../assets/img/stormtrooper-cup.png",
-      "category": "Star Wars",
-      "productName": "Cup with shape of Stormtrooper",
-      "price": "60.00"
-    },
-    {
       "id": "2",
       "img": "../assets/img/darth_vader.png",
       "category": "Star Wars",
