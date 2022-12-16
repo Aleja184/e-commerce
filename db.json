@@ -29,31 +29,10 @@
       "price": "60.00"
     },
     {
-      "id": "5",
-      "img": "../assets/img/grogu.png",
-      "category": "Star Wars",
-      "productName": "Figure of Grogu",
-      "price": "60.00"
-    },
-    {
-      "id": "6",
-      "img": "../assets/img/kylo_ren.png",
-      "category": "Star Wars",
-      "productName": "Kylo Ren",
-      "price": "60.00"
-    },
-    {
       "id": "7",
       "img": "../assets/img/xbox_controller.png",
       "category": "Consoles",
       "productName": "Xbox controller",
-      "price": "60.00"
-    },
-    {
-      "id": "8",
-      "img": "../assets/img/controller_console.png",
-      "category": "Consoles",
-      "productName": "Console with controller",
       "price": "60.00"
     },
     {

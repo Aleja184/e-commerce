@@ -17,8 +17,15 @@ const addProduct = (img,category,productName,price) =>{
     })
 }
 
+const deleteProduct = (id) =>{
+    return fetch(`http://localhost:3000/Store/${id}`,{
+        method: "DELETE"
+    })
+}
+
 
 export const services = {
     productsList,
-    addProduct
+    addProduct,
+    deleteProduct
 }
