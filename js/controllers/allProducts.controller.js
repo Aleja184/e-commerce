@@ -94,10 +94,11 @@ export const product = (id,img,productName,price,category,description) => {
 
     //Event for delete product
     const deleteProduct = li.querySelector("[data-trash]");
-    deleteProduct.addEventListener("click",()=>{
-        services.deleteProduct(id)
+    deleteProduct.addEventListener("click",async ()=>{
+        await services.deleteProduct(id)
             .then((response)=>console.log(response))
-            .catch((error)=> console.log(error))
+            .catch((error)=> console.log(error));
+        location.reload();
     })
 
 
@@ -126,6 +127,7 @@ export const product = (id,img,productName,price,category,description) => {
       const price = li.querySelector("[data-price]").value;
       const description = li.querySelector("[data-description]").value;
       services.updateProduct(id,outputImg.src,category,product,price,description);
+      location.reload();
     });
 
 
