@@ -15,7 +15,7 @@ form.addEventListener("submit",(event)=>{
     let file = img.files[0];
     reader.onloadend = function(){
         return services.addProduct(reader.result,category,productName,price,description)
-        .then(()=> location.replace("../../html/allProducts.html"))
+        .then(()=> location.replace("../../html/AddProduct.html"))
         .catch((error)=> console.log(error))
         ;
     }
