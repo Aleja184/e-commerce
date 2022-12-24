@@ -19,14 +19,14 @@
       <header><a href="index.html"><img src="../../assets/icons/AluraGeek-logo.png" alt="AluraGeek logo"></a>
         <div class="search"> 
           <label for="search"><img src="../../assets/icons/search.png" alt="Search icon"></label>
-          <input type="text" name="" id="search" placeholder="¿Qué deseas buscar?">
+          <input list="search-products" name="" id="search" placeholder="¿Qué deseas buscar?">
         </div>
         <a class="btn btn-light" href="./login.html">Login</a>
       </header>
     <!--/Header-->
     <main> 
       <!--Banner-->
-      <section class="banner">
+      <section class="banner" id="banner">
         <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-pause="false">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -54,7 +54,8 @@
       </section>
       <!--/Banner-->
     </main>
-    <section class="products"> 
+    <section id="searchProducts" class="list"></section>
+    <section class="products" id="products"> 
       <!--Star Wars-->
       <div class="products__starWars" id="star-wars"> 
           <h2 class="title">Star Wars</h2><a class="seeAll">See all <img src="../assets/icons/arrow.png" alt="Arrow"> </a>
@@ -114,6 +115,7 @@
     
     <!--Scripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="../js/controllers/searchMain.controller.js" type="module"></script>
     <script src="../js/controllers/product.controller.js" type="module"></script>
     <script src="../js/script.js" type="module"></script>
     <!--/Scripts-->

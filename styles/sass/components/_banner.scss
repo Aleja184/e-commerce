@@ -1,8 +1,15 @@
+@include media(mobile-only){
+    #carousel .overlay .container{
+        top: calc(100% - 30vh);
+    }
+}
+
 @include media(tablet-p-only){
     .carousel-inner img{
         height: 30vh;
     }
     #carousel .overlay .container{
+        top: 30%;
         margin: 0;
         left: -20%;
     }

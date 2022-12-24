@@ -4,7 +4,7 @@ const starWars = document.getElementById("star-wars-list");
 const consoles = document.getElementById("consoles-list");
 const others = document.getElementById("others-list");
 
-const newProduct = (id,img,category,productName,price) =>{
+export const newProduct = (id,img,productName,price,description) =>{
     const li = document.createElement("li");
     const content = `
             <img src=${img} alt=${productName}>
@@ -21,9 +21,9 @@ const newProduct = (id,img,category,productName,price) =>{
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
-                        <img src=${img} alt=${productName}>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus eveniet voluptatibus enim inventore, voluptatum fugiat eligendi architecto qui corporis fuga quod labore perferendis sint, ex facere sequi culpa maiores fugit!</p>
-                        <strong>$${price} </strong>
+                        <img src=${img} alt=${productName} id="modalImg">
+                        <p>${description}</p>
+                        <strong id="modalPrice">$${price} </strong>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -39,8 +39,8 @@ const newProduct = (id,img,category,productName,price) =>{
 }
 
 services.productsList().then((data)=>{
-    data.forEach(({id,img,category,productName,price})=>{
-        const newLine = newProduct(id,img,category,productName,price);
+    data.forEach(({id,img,category,productName,price,description})=>{
+        const newLine = newProduct(id,img,productName,price,description);
         if(category === "Star Wars"){
             starWars.appendChild(newLine);
         }else if(category === "Consoles"){

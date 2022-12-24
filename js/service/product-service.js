@@ -1,7 +1,7 @@
 const productsList = () => fetch("http://localhost:3000/Store").then(response => response.json());
 
 
-const addProduct = (img,category,productName,price) =>{
+const addProduct = (img,category,productName,price,description) =>{
     return fetch("http://localhost:3000/Store",{
         method: "POST",
         headers: {
@@ -12,7 +12,8 @@ const addProduct = (img,category,productName,price) =>{
             img,
             category,
             productName,
-            price
+            price,
+            description
         })
     })
 }
@@ -23,9 +24,25 @@ const deleteProduct = (id) =>{
     })
 }
 
+const updateProduct = (id,img,category,productName,price,description) =>{
+    return fetch(`http://localhost:3000/Store/${id}`,{
+        method:"PUT",
+        headers:{
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            img,
+            category,
+            productName,
+            price,
+            description
+        })
+    })
+}
 
 export const services = {
     productsList,
     addProduct,
-    deleteProduct
+    deleteProduct,
+    updateProduct
 }

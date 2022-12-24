@@ -9,13 +9,44 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* Media Queries Mixin
 **********************/
+.select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.select > select {
+  margin-left: 1rem;
+}
+
+#modalImg {
+  width: 50%;
+}
+
+#modalPrice {
+  text-align: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  #carousel .overlay .container {
+    top: calc(100% - 30vh);
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
   .carousel-inner img {
     height: 30vh;
   }
   #carousel .overlay .container {
+    top: 30%;
     margin: 0;
     left: -20%;
   }
@@ -67,12 +98,44 @@ header .search {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 header .search input {
   display: none;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: #464646;
+  padding: 0.2rem;
+}
+header .search ::-webkit-input-placeholder {
+  color: #2A7AE4;
+}
+header .search ::-moz-placeholder {
+  color: #2A7AE4;
+}
+header .search :-ms-input-placeholder {
+  color: #2A7AE4;
+}
+header .search ::-ms-input-placeholder {
+  color: #2A7AE4;
+}
+header .search ::placeholder {
+  color: #2A7AE4;
+}
+header .search input:hover {
+  border: 1px solid #2A7AE4;
 }
 header .search img {
   cursor: pointer;
+}
+header .search:hover > input {
+  display: block;
 }
 @media only screen and (min-width: 768px) {
   header .search {
@@ -96,6 +159,9 @@ header .search img {
     border-bottom-left-radius: 30px;
     width: 92%;
     padding-left: 5px;
+  }
+  header .search input:hover {
+    border: none;
   }
   header .search img {
     -o-object-fit: contain;
@@ -335,6 +401,83 @@ header .search img {
       align-self: flex-start;
 }
 
+.list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50%)[2];
+  grid-template-columns: repeat(2, 50%);
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
+.list > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.list > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+.list .title {
+  font-size: 1.5rem;
+  margin: 5%;
+}
+.list .seeAll {
+  font-size: 1.5rem;
+  margin: 4%;
+  justify-self: flex-end;
+  cursor: pointer;
+}
+.list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100vw;
+  padding: 0 auto;
+}
+.list ul li {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+.list ul li img {
+  width: 90%;
+}
+.list ul li h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.list ul li a {
+  font-weight: bold;
+}
+@media only screen and (min-width: 768px) {
+  .list ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .list ul li {
+    width: 15%;
+  }
+}
+.list .seeProduct {
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: var(--bs-link-color);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 .modal-body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -482,6 +625,18 @@ header .search img {
   width: 1.2rem;
   margin: 0 2px;
   cursor: pointer;
+}
+.allProducts__editProduct {
+  width: 60%;
+}
+.allProducts__inputImgModal {
+  margin-bottom: 0.5rem;
+}
+.allProducts__changes {
+  margin-top: 0.5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .addProduct {

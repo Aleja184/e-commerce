@@ -35,9 +35,13 @@
             Please enter a message
           </div>
         </div>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingCategory" placeholder="Categoría" maxlength="20" data-type="category" required data-category>
-          <label for="floatingInput">Category</label>
+        <div class="mb-3 file select">
+          <label>Category</label>
+          <select id="select1" class="form-select" required data-category>
+            <option value="Star Wars">Star Wars</option>
+            <option value="Consoles">Consoles</option>
+            <option value="Others">Others</option>
+          </select>
           <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
             Please enter a message
           </div>

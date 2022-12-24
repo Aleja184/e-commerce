@@ -13,6 +13,11 @@
     @include seeProduct;
 }
 
+.list{
+    @include products;
+    @include seeProduct;
+}
+
 .modal {
     &-body{
         display: flex;

@@ -1,13 +1,13 @@
 import { services } from "../service/product-service.js";
-import { product } from "./allProducts.controller.js";
+import { newProduct } from "./product.controller.js";
+
 
 const search = document.getElementById("search");
-const list = document.getElementById("allProducts-list");
-const section = document.getElementById("allProducts");
+const listProducts = document.getElementById("products");
+const banner = document.getElementById("banner");
+const productsSearch = document.getElementById("searchProducts");
 const ul = document.createElement("ul");
 ul.id = "list-search";
-ul.classList.add("allProducts__list");
-
 
 const arrayProducts = async (input) =>{
     try {
@@ -22,25 +22,24 @@ const arrayProducts = async (input) =>{
     }
 }
 
-
 search.addEventListener("input",({target})=>{
     const dataSearch = target.value;
-    list.style.display = "none";
-    section.appendChild(ul);
     if(dataSearch.length){
+        banner.style.display = "none";
+        listProducts.style.display = "none";
+        productsSearch.appendChild(ul);
         arrayProducts(dataSearch).then((response) => {
             ul.innerHTML = "";
-            response.map(({id,img,productName,price})=> {
-                ul.appendChild(product(id,img,productName,price));
+            response.map(({id,img,productName,price,description})=> {
+                ul.appendChild(newProduct(id,img,productName,price,description));
+                console.log(productName);
             })
         })
-    }else {
-        section.removeChild(ul);
-        list.style.display = "flex";
+    }else{
+        productsSearch.removeChild(ul);
+        banner.style.display = "block";
+        listProducts.style.display = "block";
     }
-})
-
-
-
+});
 
 

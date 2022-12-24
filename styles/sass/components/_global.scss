@@ -106,3 +106,20 @@ $color-second-font:#FFFFFF;
         align-self: flex-start;
       }
 }
+
+.select{
+    display: flex;
+    align-items: center;
+    >select{
+        margin-left: 1rem;
+    }
+}
+
+#modalImg{
+    width: 50%;
+}
+
+#modalPrice{
+    text-align: center;
+    width: 100%;
+}

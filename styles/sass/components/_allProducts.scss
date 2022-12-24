@@ -17,4 +17,16 @@
             cursor: pointer;
         }
     }
+    &__editProduct{
+        width: 60%;
+    }
+
+    &__inputImgModal{
+        margin-bottom: 0.5rem;
+    }
+
+    &__changes{
+        margin-top: 0.5rem;
+        align-self: center;
+    }
 }

@@ -11,12 +11,28 @@ header{
     }
     .search{
         order: 3;
+        display: flex;
         input{
             display: none;
+            order: -1;
+            margin-right: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid black;
+            color: $color-font;
+            padding: 0.2rem;
+        }
+        ::placeholder{
+            color: $background-buttons;
+        }
+        input:hover{
+            border: 1px solid $background-buttons;
         }
         img{
             cursor: pointer;
         }
+    }
+    .search:hover > input{
+        display: block;
     }
     @include media(tablet){
         .search{
@@ -33,6 +49,9 @@ header{
                 border-bottom-left-radius: 30px;
                 width: 92%;
                 padding-left: 5px;
+            }
+            input:hover{
+                border: none;
             }
             img{
                 object-fit: contain;
