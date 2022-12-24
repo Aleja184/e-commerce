@@ -1,8 +1,8 @@
-const productsList = () => fetch("http://localhost:3000/Store").then(response => response.json());
+const productsList = () => fetch("https://e-commerce-alura.onrender.com/Store").then(response => response.json());
 
 
 const addProduct = (img,category,productName,price,description) =>{
-    return fetch("http://localhost:3000/Store",{
+    return fetch("https://e-commerce-alura.onrender.com/Store",{
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -19,13 +19,13 @@ const addProduct = (img,category,productName,price,description) =>{
 }
 
 const deleteProduct = (id) =>{
-    return fetch(`http://localhost:3000/Store/${id}`,{
+    return fetch(`https://e-commerce-alura.onrender.com/Store/${id}`,{
         method: "DELETE"
     })
 }
 
 const updateProduct = (id,img,category,productName,price,description) =>{
-    return fetch(`http://localhost:3000/Store/${id}`,{
+    return fetch(`https://e-commerce-alura.onrender.com/Store/${id}`,{
         method:"PUT",
         headers:{
             "Content-Type": "application/json"
