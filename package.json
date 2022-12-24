@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "json-server": "^0.17.1"
-  }
+  },
+  "name": "e-commerce",
+  "description": "A web site type e-commerce.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleja184/e-commerce.git"
+  },
+  "author": "Alejandra Toro Grisales",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aleja184/e-commerce/issues"
+  },
+  "homepage": "https://github.com/Aleja184/e-commerce#readme"
 }
