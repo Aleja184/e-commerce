@@ -135,8 +135,8 @@ export const product = (id,img,productName,price,category,description) => {
     return li;
 }
 
-services.productsList().then((data)=>{
-    data.forEach(({id,img,productName,price,category,description})=>{
+services.productsList().then(async (data)=>{
+    await data.forEach(({id,img,productName,price,category,description})=>{
         list.appendChild(product(id,img,productName,price,category,description));
     })
 })

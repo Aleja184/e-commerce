@@ -38,8 +38,8 @@ export const newProduct = (id,img,productName,price,description) =>{
     return li;
 }
 
-services.productsList().then((data)=>{
-    data.forEach(({id,img,category,productName,price,description})=>{
+services.productsList().then(async (data)=>{
+    await data.forEach(({id,img,category,productName,price,description})=>{
         const newLine = newProduct(id,img,productName,price,description);
         if(category === "Star Wars"){
             starWars.appendChild(newLine);
