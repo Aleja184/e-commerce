@@ -3,7 +3,7 @@ import { validation, validationText } from "../validations.js";
 
 const list = document.getElementById("allProducts-list");
 
-export const product = (id,img,productName,price,category,description) => {
+export const product = (id,img,category,productName,price,description) => {
     const li = document.createElement("li");
     const content = `
     <img class="allProducts__img" src=${img} alt="Cup with shape of stormtrooper">
@@ -136,8 +136,8 @@ export const product = (id,img,productName,price,category,description) => {
 }
 
 services.productsList().then((data)=>{
-    data.forEach(({id,img,productName,price,category,description})=>{
-        list.appendChild(product(id,img,productName,price,category,description));
+    data.forEach(({id,img,category,productName,price,description})=>{
+        list.appendChild(product(id,img,category,productName,price,description));
     })
 })
   .catch((error)=> console.log(error))

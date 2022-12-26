@@ -3,7 +3,7 @@ import { product } from "./allProducts.controller.js";
 
 const search = document.getElementById("search");
 const list = document.getElementById("allProducts-list");
-const section = document.getElementById("allProducts");
+const section = document.getElementById("searchProducts");
 const ul = document.createElement("ul");
 ul.id = "list-search";
 ul.classList.add("allProducts__list");
@@ -25,13 +25,13 @@ const arrayProducts = async (input) =>{
 
 search.addEventListener("input",({target})=>{
     const dataSearch = target.value;
-    list.style.display = "none";
-    section.appendChild(ul);
     if(dataSearch.length){
+        list.style.display = "none";
+        section.appendChild(ul);
         arrayProducts(dataSearch).then((response) => {
             ul.innerHTML = "";
-            response.map(({id,img,productName,price})=> {
-                ul.appendChild(product(id,img,productName,price));
+            response.map(({id,img,category,productName,price,description})=> {
+                ul.appendChild(product(id,img,category,productName,price,description));
             })
         })
     }else {

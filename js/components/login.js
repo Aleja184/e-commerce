@@ -44,7 +44,8 @@ loginForm.addEventListener('submit',(e)=>{
     if(validEmail && validPassword){
         location.replace('../html/allProducts.html');
     }else{
-        swal('Incorrect email or password','','error');
+        swal('Incorrect email or password','','error')
+            .then(()=> location.reload());
     }
     
 })

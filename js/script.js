@@ -2,8 +2,8 @@ import { validation, validationText } from "./validations.js";
 
 //Inputs and textarea
 export const inputs = document.querySelectorAll('input');
-const textarea = document.querySelectorAll('textarea')
 
+const textarea = document.querySelectorAll('textarea')
 //Forms
 const footerForm = document.getElementById('footer_form');
 
