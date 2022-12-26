@@ -4,9 +4,9 @@ const starWars = document.getElementById("star-wars-list");
 const consoles = document.getElementById("consoles-list");
 const others = document.getElementById("others-list");
 
-export const newProduct = (id,img,productName,price,description) =>{
+export const newProduct = async (id,img,productName,price,description) =>{
     const li = document.createElement("li");
-    const content = `
+    const content = await `
             <img src=${img} alt=${productName}>
             <h3>${productName}</h3><strong>$${price}</strong>
             <button type="button" class="seeProduct" data-bs-toggle="modal" data-bs-target="#Product${id}">
@@ -38,8 +38,8 @@ export const newProduct = (id,img,productName,price,description) =>{
     return li;
 }
 
-services.productsList().then(async (data)=>{
-    await data.forEach(({id,img,category,productName,price,description})=>{
+services.productsList().then((data)=>{
+    data.forEach(({id,img,category,productName,price,description})=>{
         const newLine = newProduct(id,img,productName,price,description);
         if(category === "Star Wars"){
             starWars.appendChild(newLine);
