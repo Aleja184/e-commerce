@@ -119,14 +119,14 @@ export const product = (id,img,productName,price,category,description) => {
     });
 
     //Event for submit the changes of the product
-    updateProduct.addEventListener("submit",(event)=>{
+    updateProduct.addEventListener("submit",async (event)=>{
       event.preventDefault();
       const categorySelect = li.querySelector("[data-category]");
       const category = categorySelect.options[categorySelect.selectedIndex].value;
       const product = li.querySelector("[data-product]").value;
       const price = li.querySelector("[data-price]").value;
       const description = li.querySelector("[data-description]").value;
-      services.updateProduct(id,outputImg.src,category,product,price,description);
+      await services.updateProduct(id,outputImg.src,category,product,price,description);
       location.reload();
     });
 
