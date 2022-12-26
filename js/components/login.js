@@ -3,24 +3,25 @@ import { inputs } from "../script.js";
 const loginForm = document.getElementById('login_form');
 
 //Variable for valid the email and password
-let valid = false;
+let validEmail = false;
+let validPassword= false;
 
 //Function for save email and password
 export const saveData = (inputType,inputValue) =>{
     switch (inputType) {
         case "email":
             if(inputValue === "torogrisalesa@gmail.com"){
-                valid = true;
+                validEmail = true;
             }else{
-                valid = false;
+                validEmail = false;
             }
                 
             break
         case "password":
             if(inputValue === "123"){
-                valid = true;
+                validPassword = true;
             }else{
-                valid = false;
+                validPassword = false;
             }
             break
         default:
@@ -40,7 +41,7 @@ inputs.forEach((input)=>{
 //Event onsubmit Login
 loginForm.addEventListener('submit',(e)=>{
     e.preventDefault();
-    if(valid){
+    if(validEmail && validPassword){
         location.replace('../html/allProducts.html');
     }else{
         swal('Incorrect email or password','','error');
