@@ -16,7 +16,7 @@ export const product = (id,img,productName,price,category,description) => {
     </button>
     <!--Modal-->
         <div class="modal fade" id="Product${id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-fullscreen-md-down">
             <div class="modal-content">
               <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Edit product</h1>
@@ -45,7 +45,7 @@ export const product = (id,img,productName,price,category,description) => {
                 </div>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingProduct" placeholder="Product name" maxlength="40" data-type="productName" required data-product value=${productName}>
+                <input type="text" class="form-control" id="floatingProduct" placeholder="Product name" maxlength="40" data-type="productName" required data-product value="${productName}">
                 <label for="floatingInput">Product name</label>
                 <div class="alert alert-danger mt-2 p-1 d-none" role="alert">
                   Please enter a message
