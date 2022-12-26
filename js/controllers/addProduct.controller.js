@@ -15,7 +15,16 @@ form.addEventListener("submit",(event)=>{
     let file = img.files[0];
     reader.onloadend = function(){
         return services.addProduct(reader.result,category,productName,price,description)
-        .then(()=> location.replace("../../html/allProducts.html"))
+        .then(()=> Swal.fire({
+            title: 'Saved',
+            showDenyButton: false,
+            showCancelButton: false,
+            confirmButtonText: 'Ok'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              location.reload();
+            } 
+          }))
         .catch((error)=> console.log(error))
         ;
     }

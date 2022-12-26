@@ -1,4 +1,4 @@
-const productsList = () => fetch("https://e-commerce-alura.onrender.com/Store").then(response => response.json());
+const productsList = async () => await fetch("https://e-commerce-alura.onrender.com/Store").then(response => response.json());
 
 
 const addProduct = (img,category,productName,price,description) =>{

@@ -4,9 +4,9 @@ const starWars = document.getElementById("star-wars-list");
 const consoles = document.getElementById("consoles-list");
 const others = document.getElementById("others-list");
 
-export const newProduct = async (id,img,productName,price,description) =>{
+export const newProduct = (id,img,productName,price,description) =>{
     const li = document.createElement("li");
-    const content = await `
+    const content = `
             <img src=${img} alt=${productName}>
             <h3>${productName}</h3><strong>$${price}</strong>
             <button type="button" class="seeProduct" data-bs-toggle="modal" data-bs-target="#Product${id}">

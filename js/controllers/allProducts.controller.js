@@ -3,9 +3,9 @@ import { validation, validationText } from "../validations.js";
 
 const list = document.getElementById("allProducts-list");
 
-export const product = async(id,img,productName,price,category,description) => {
+export const product = (id,img,productName,price,category,description) => {
     const li = document.createElement("li");
-    const content = await`
+    const content = `
     <img class="allProducts__img" src=${img} alt="Cup with shape of stormtrooper">
     <div class="allProducts__icons">
         <img src="../assets/icons/trash.png" alt="Trash icon" data-trash class="trashIcon">
