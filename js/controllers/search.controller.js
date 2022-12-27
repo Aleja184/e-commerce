@@ -2,7 +2,7 @@ import { services } from "../service/product-service.js";
 import { product } from "./allProducts.controller.js";
 
 const search = document.getElementById("search");
-const list = document.getElementById("allProducts-list");
+const list = document.getElementById("allProducts");
 const section = document.getElementById("searchProducts");
 const ul = document.createElement("ul");
 ul.id = "list-search";
@@ -36,9 +36,17 @@ search.addEventListener("input",({target})=>{
         })
     }else {
         section.removeChild(ul);
-        list.style.display = "flex";
+        list.style.display = "grid";
     }
 })
+
+search.addEventListener("blur",({target})=>{
+    const dataSearch = target.value;
+    if(dataSearch.length === 0){
+        section.removeChild(ul);
+        list.style.display = "grid";
+    }
+});
 
 
 

@@ -42,4 +42,13 @@ search.addEventListener("input",({target})=>{
     }
 });
 
+search.addEventListener("blur",({target})=>{
+    const dataSearch = target.value;
+    if(dataSearch.length === 0){
+        productsSearch.removeChild(ul);
+        banner.style.display = "block";
+        listProducts.style.display = "block";
+    }
+});
+
 
