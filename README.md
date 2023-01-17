@@ -24,6 +24,7 @@ https://aleja184.github.io/e-commerce/
 - Pug
 - CSS3
 - Sass
+- Bootstrap
 - JavaScript
 - Json server
 - Render
