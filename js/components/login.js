@@ -10,7 +10,7 @@ let validPassword= false;
 export const saveData = (inputType,inputValue) =>{
     switch (inputType) {
         case "email":
-            if(inputValue === "torogrisalesa@gmail.com"){
+            if(inputValue === "user@gmail.com"){
                 validEmail = true;
             }else{
                 validEmail = false;
